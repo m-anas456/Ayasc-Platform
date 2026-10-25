@@ -90,15 +90,15 @@ function StarField() {
 export function AnimatedBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
-      {/* Base gradient - deep navy */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_80%_at_50%_-20%,#0f2847_0%,#060b18_60%,#060b18_100%)]" />
+      {/* Base gradient - warm neutral */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_120%_80%_at_50%_-20%,rgba(185,152,111,0.19)_0%,rgba(244,239,232,0.96)_42%,#f4efe8_100%)]" />
 
       {/* Subtle grid overlay */}
       <div className="absolute inset-0 grid-bg opacity-30" />
 
       {/* Large ambient glow orbs */}
       <motion.div
-        className="absolute -top-[10%] left-[15%] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle,rgba(63,224,208,0.06)_0%,transparent_70%)]"
+        className="absolute -top-[10%] left-[15%] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle,rgba(151,113,78,0.08)_0%,transparent_70%)]"
         animate={{
           x: [0, 30, 0],
           y: [0, -20, 0],
@@ -107,7 +107,7 @@ export function AnimatedBackground() {
         transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-[40%] -right-[10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(26,122,138,0.05)_0%,transparent_70%)]"
+        className="absolute top-[40%] -right-[10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(104,119,140,0.05)_0%,transparent_70%)]"
         animate={{
           x: [0, -25, 0],
           y: [0, 30, 0],
@@ -116,7 +116,7 @@ export function AnimatedBackground() {
         transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute top-[70%] left-[5%] h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,rgba(63,224,208,0.04)_0%,transparent_70%)]"
+        className="absolute top-[70%] left-[5%] h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,rgba(185,152,111,0.05)_0%,transparent_70%)]"
         animate={{
           x: [0, 20, 0],
           y: [0, -15, 0],
@@ -128,7 +128,7 @@ export function AnimatedBackground() {
       <StarField />
 
       {/* Vignette overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#060b18_100%)] opacity-60" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(244,239,232,0.72)_100%)] opacity-80" />
     </div>
   )
 }

@@ -1,16 +1,17 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { Manrope, Cormorant_Garamond } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-manrope',
 })
 
-const spaceGrotesk = Space_Grotesk({
+const display = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-heading',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-display',
 })
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#060b18',
+  themeColor: '#f4efe8',
   width: 'device-width',
   initialScale: 1,
 }
@@ -36,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${display.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />
